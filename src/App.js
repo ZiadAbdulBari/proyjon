@@ -5,12 +5,12 @@ import Cart from './components/Cart/Cart';
 import Header from './components/Header/Header';
 
 function App() {
-  const [product,setProduct]=useState('');
+  const [products,setProducts]=useState('');
   useEffect(()=>{
     axios.get('https://fakestoreapi.com/products')
     .then(response=>{
       console.log(response);
-      setProduct(...product,response.data);
+      setProducts(...products,response.data);
     })
     .catch(error=>{
       console.log(error);
@@ -20,8 +20,8 @@ function App() {
     <div className="App">
       <Header/>
       <div className='container mx-auto'>
-        <div className='grid grid-cols-4 gap-4 my-5'>
-          <Cart/>
+        <div className='grid grid-cols-4 gap-4 my-5'> 
+          <Cart product={products}/>
         </div>
       </div>
     </div>
