@@ -1,8 +1,21 @@
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import './App.css';
 import Cart from './components/Cart/Cart';
 import Header from './components/Header/Header';
 
 function App() {
+  const [product,setProduct]=useState('');
+  useEffect(()=>{
+    axios.get('https://fakestoreapi.com/products')
+    .then(response=>{
+      console.log(response);
+      setProduct(...product,response.data);
+    })
+    .catch(error=>{
+      console.log(error);
+    })
+  },[])
   return (
     <div className="App">
       <Header/>
