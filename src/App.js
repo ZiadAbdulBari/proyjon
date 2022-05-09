@@ -21,7 +21,7 @@ function App() {
       <Header/>
       <div className='container mx-auto'>
         <div className='grid grid-cols-4 gap-4 my-5'> 
-          <Cart product={products}/>
+          <Cart products={products}/>
         </div>
       </div>
     </div>
