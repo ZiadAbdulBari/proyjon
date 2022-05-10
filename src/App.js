@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './App.css';
-import Cart from './components/Cart/Cart';
+import AllProduct from './components/AllProduct/AllProduct';
 import Header from './components/Header/Header';
 
 function App() {
@@ -21,11 +21,10 @@ function App() {
       <Header/>
       <div className='container mx-auto'>
         <div className='grid grid-cols-4 gap-4 my-5'>
-        {/* <Cart/> */}
         {
           products.map((product,index)=>{
             return(
-              <Cart key={index} product={product}/>
+              <AllProduct key={index} product={product}/>
             )
           })
         } 

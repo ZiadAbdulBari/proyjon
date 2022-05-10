@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import productImg from "../../assets/images/product.avif"
-function Cart(props) {
+import React from 'react'
+// import productImg from "../../assets/images/product.avif"
+function AllProduct(props) {
     // const [product,setProduct] = useState('')
   return (
     <div>
@@ -39,4 +39,4 @@ function Cart(props) {
   )
 }
 
-export default Cart
+export default AllProduct
