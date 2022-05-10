@@ -20,7 +20,7 @@ function App() {
     <div className="App">
       <Header/>
       <div className='container mx-auto'>
-        <div className='grid grid-cols-4 gap-4 my-5'>
+        <div className='grid grid-cols-5 bg-gray-100 gap-4 my-5'>
         {
           products.map((product,index)=>{
             return(

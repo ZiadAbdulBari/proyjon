@@ -5,9 +5,10 @@ function AllProduct(props) {
     // const [product,setProduct] = useState('')
   return (
     <div>
-        <div className='rounded-md bg-gray-100'>
-            <img className='overflow-hidden max-w-full' src={props.product.image} alt="" />
-            <div className='px-3 pb-3'>
+        <div className='rounded-md bg-white pb-6'>
+            <img className='overflow-hidden max-w-full h-[300px]' src={props.product.image} alt="" />
+            <div className='w-full h-[2px] bg-gray-100 mt-5'></div>
+            <div className='px-3'>
                 <div className='flex justify-between items-center my-3'>
                     <div className='flex gap-1'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-star" viewBox="0 0 16 16">
