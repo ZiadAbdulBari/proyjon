@@ -9,6 +9,7 @@ import './index.css';
 import App from './App';
 import Signup from './pages/signup'
 import Login from './pages/login'
+import Details from './pages/details'
 import Missing from './pages/missing'
 import reportWebVitals from './reportWebVitals';
 
@@ -22,6 +23,7 @@ root.render(
       <Route path="/" element={<App />} />
       <Route path="signup" element={<Signup />} />
       <Route path="login" element={<Login />} />
+      <Route path='details/:id' element={<Details />}/>
       <Route path="*" element={<Missing/>}/>
     </Routes>
   </BrowserRouter>

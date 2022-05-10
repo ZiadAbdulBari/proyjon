@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 // import productImg from "../../assets/images/product.avif"
 function AllProduct(props) {
     // const [product,setProduct] = useState('')
@@ -30,7 +31,7 @@ function AllProduct(props) {
                     </div>
                 </div>
                 <div>
-                    <button className='bg-yellow-400 font-semibold py-1 px-6'>Detail</button>
+                    <Link to={`details/${props.product.id}`} className='bg-yellow-400 font-semibold py-1 px-6'>Detail</Link>
                 </div>
             </div>
         </div>
