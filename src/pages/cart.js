@@ -12,9 +12,9 @@ function Cart() {
         })
     },[])
 
-    // const removeProductFromCart = ()=>{
-
-    // }
+    const removeProductFromCart = ()=>{
+        console.log("deleted data from cart")
+    }
   return (
     <div>
         <div className='container mx-auto'>
