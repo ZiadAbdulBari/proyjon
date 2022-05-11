@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import Header from '../components/Header/Header';
 
 function Cart() {
     const [cartData,setCartData] = useState([]);
@@ -17,6 +18,7 @@ function Cart() {
     }
   return (
     <div>
+        <Header/>
         <div className='container mx-auto'>
             {
                 cartData.map((product,index)=>{
