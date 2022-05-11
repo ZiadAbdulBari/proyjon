@@ -52,6 +52,7 @@ function Signup() {
             console.log(response);
             if(response.status==200){
                 localStorage.setItem('isLoggedin',true);
+                localStorage.setItem('userData',JSON.stringify(response.data));
                 navigate('/');
             }
         })

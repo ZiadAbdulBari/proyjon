@@ -18,6 +18,28 @@ function Details() {
             console.log(error);
         })
     },[])
+
+    const addToCart = ()=>{
+        const url = 'https://fakestoreapi.com/carts';
+        let userData = JSON.parse(localStorage.getItem('userData'))
+        var today = new Date();
+        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+        let data = {
+            userId:userData.id,
+            date:date,
+            products:[
+                {
+                    productId:productId,
+                    quantity:1
+                }
+            ]
+        }
+        axios.post(url,data)
+        .then(response=>{
+            console.log(response);
+        })
+        console.log("Clicked")
+    }
   return (
     <div>
         <Header/>
@@ -52,7 +74,7 @@ function Details() {
                             <button className='px-10 py-2 bg-[#151C47] text-white'>Buy Now</button>
                         </div>
                         <div>
-                            <button className='px-10 py-2 bg-yellow-400'>Add to Cart</button>
+                            <button onClick={addToCart} className='px-10 py-2 bg-yellow-400'>Add to Cart</button>
                         </div>
                     </div>
                 </div>

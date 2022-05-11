@@ -23,7 +23,7 @@ function Login() {
         let url = 'https://fakestoreapi.com/auth/login';
         axios.post(url,user)
         .then(response=>{
-            // console.log(response);
+            console.log(response);
             
             let token = response.data.token;
             localStorage.setItem('token',JSON.stringify(token));

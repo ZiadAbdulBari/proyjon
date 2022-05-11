@@ -10,6 +10,7 @@ import App from './App';
 import Signup from './pages/signup'
 import Login from './pages/login'
 import Details from './pages/details'
+import Cart from './pages/cart'
 import Missing from './pages/missing'
 import reportWebVitals from './reportWebVitals';
 
@@ -24,6 +25,7 @@ root.render(
       <Route path="signup" element={<Signup />} />
       <Route path="login" element={<Login />} />
       <Route path='details/:id' element={<Details />}/>
+      <Route path='cart' element={<Cart />} />
       <Route path="*" element={<Missing/>}/>
     </Routes>
   </BrowserRouter>
