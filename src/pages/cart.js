@@ -1,8 +1,12 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom';
 import Header from '../components/Header/Header';
-
-function Cart() {
+function Cart({props}) {
+    const location = useLocation();
+    const data = location.state;
+    console.log(data);
+    
     const [cartData,setCartData] = useState([]);
     useEffect(()=>{
         let url = 'https://fakestoreapi.com/carts'
